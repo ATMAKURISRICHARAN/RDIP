@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>RDPI</title>
+<style>
+h1{
+font-size:200%;
+text-align:center;
+}
+#img{
+float:left;
+}
+p1{
+ float:right;
+ font-size:200%;
+ text-decoration:underline;
+}
+ul{
+margin: 0;
+background-color:black ;
+height:50px;
+padding:0;
+}
+li {
+display:inline;
+}
+#a{
+padding:20px;
+color:white;
+text-decoration:none;
+}
+</style>
+</head>
+<body>
+<h1>REGISTRATION FORM:</h1>
+<a href="https://www.iiit.ac.in"><img id="img" src="https://www.iiit.ac.in/img/iiit-new.png" width="150px" height="100px"></a>
+<a href="https://serc.iiit.ac.in/rdip"><p1>RDIP</p1></a><br><br><br><br><br><br>
+<ul>
+<br/>
+<li><a href="homepage.html" id="a">Home</a></li>
+<li><a href="registration.html" id="a">Registration Form</a></li>
+</ul><br/><br/><br/>
+<form action="details.html"  method="get">
+<label for="fname"  >First name:</label>   <input type="text"  id="fname" name="fname" value="" style="border-radius:5px;margin-left:60px;"><br/><br/>
+<label for="lname">Last name:</label>       <input type="text id="lname" name="fname" value="" style="border-radius:5px;margin-left:60px;"><br/><br/> 
+<label for="email">Email:</label>     <input type="text" id="email" name="email" value="" style="border-radius:5px;margin-left:90px"><br/><br/>
+<label for="number">Phone no:</label>  <input type="text" id="number" name="number" value="" style="border-radius:5px;margin-left:65px"><br/><br/>
+<label for="gender">Gender:</label>
+<input type="radio" id="gender" name="gender" value="Male"  style="margin-left:75px"><label for="gender">Male</label>         <input type="radio" id="gender1" name="gender" value=""><label for="gender1">Female</label>   <input type="radio" id="gender2" name="gender" value=""><label for="gender2">other</label><br/><br/>
+<label for="reason for rdip">Reason for RDIP:</label>
+<input type="radio" id="reason for rdip" name="reason for rdip" value="HTML"style="margin-left:10px"><label for="stream">HTML</label>         <input type="radio" id="reason for rdip1" name="reason for rdip" value=""><label for="reason for rdip1">CSS</lable>   <input type="radio" id="reason for rdip2" name="reason for rdip" value="" ><label for="reason for rdip2">JavaScript</lable><br/><br/>
+<label for="cname" >College name:</label>   <input type="text" id="cname" name="fname" value="" style="border-radius:5px;margin-left:35px"><br/><br/>
+<input type="radio" id="license" name="license" value="declare"><label for="license" style="margin-left:50px">I declare above details given by me are true.</label><br/><br/>
+<input type="submit" value="Submit" style="border-radius:5px"> <a href="registration.html"style="margin-left:100px"><button type="button"  style="border-radius:5px">Reset</button></a> 
+</form> 
+</body>
+</html>
