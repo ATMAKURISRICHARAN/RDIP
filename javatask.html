@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>JAVASCRIPT</title>
+  </head>
+  <body>
+      <button type="button" onclick="date()">Date is in console</button>
+<hr>
+number:<input type="text" id="number" oninput="checking()"></input>
+<hr>
+number:<input type="text" id="n"></input>
+result:<button type="button"  onclick="fibonacci()">result</button>
+<hr>
+
+    <input id="error" type="text" />
+    <button type="button" onclick="error()">Check</button>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <hr />
+
+    <p id="count">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions</p>
+    <button onclick="count()">Click</button><br />
+    <span id="five"></span>
+    <span id="seven"></span>
+    <span id="ten"></span>
+<script>
+      function date(){
+      var a=new Date();
+      var b=a.getDate();
+      var c=a.getMonth()+1;
+      var d=a.getFullYear();
+      console.log(b+"/"+c+"/"+d);
+}
+function checking(){
+     var a=parseInt(document.getElementById("number").value);
+     if(a>=10 && a<=100)
+       {
+             alert("The number is between 10-100 ");
+       }
+     else
+       {
+             alert("The number is beyond the 10-100");  
+       }
+       
+}
+function fibonacci() {
+    var number=parseInt(document.getElementById("n").value);
+    var previous_first = 0, previous_second = 1, next = 1;
+     a=[0,1];
+    for(var i =2 ; i <= number; i++) {
+        next = previous_first + previous_second;
+        previous_first = previous_second;
+        previous_second = next;
+        a.push(next);
+    }    
+   document.write(a);
+ }
+function error() {
+        var msg, x;
+        msg = document.getElementById("p3");
+        msg1 = document.getElementById("p4");
+        x = document.getElementById("error").value;
+        try {
+          if (x == "") throw "nothing is there";
+          if (isNaN(x)) throw "its all charcters";
+          x = Number(x);
+          if (x < 1) throw "less";
+          if (x > 10) throw " more";
+        } catch (error) {
+          msg.innerHTML = "Input is " + error;
+        } finally {
+          msg1.innerHTML = "Finally Block Executed :";
+        }
+      }
+function count() {
+        var five_ = document.getElementById("five");
+        var seven_ = document.getElementById("seven");
+        var ten_ = document.getElementById("ten");
+        var st ="JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions"
+        var res = st.split(" ");
+        var five= res[6];
+        var seven = res[8];
+        var ten = res[11];
+        five_.innerHTML = " <h4>5<sup>th</sup> word :" + five + "</h4>";
+        seven_.innerHTML = " <h4>7<sup>th</sup> word :  " + seven + "</h4>";
+        ten_.innerHTML = " <h4>10<sup>th</sup> word : " + ten + "</h4>";
+        +"</h4>";
+      }
+
+     
+</script>
+</body>
+</html>  
