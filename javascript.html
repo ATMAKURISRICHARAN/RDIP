@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>java</title>
+<style>
+table,td, th {
+  border: 1px solid black;
+  text-align:left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h2>JAVA SCRIPT<h2>
+</br>
+</br>
+<p id="demo">what is javascript ?</p>
+<button onclick="aboutjava()">click me to know</button>
+</br>
+</br>
+<hr>
+<table id="Mytable">
+  <tr>
+    <th>SUBJECT</th>
+    <th>MARKS</th>
+  </tr>
+  <tr>
+    <td>DIGITAL SIGNAL PROCESSING</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>MICRO WAVE ENGINEERING</td>
+    <td>60</td>
+  </tr>
+  <tr>
+    <td>NETWORK ANALYSIS</td>
+    <td>75</td>
+  </tr>
+  <tr>
+    <td>SIGNALS AND SYSTEMS</td>
+    <td>65</td>
+  </tr>
+  <tr>
+    <td>ELECTRONIC CIRCUIT ANALYSIS</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>CONTROL SYSTEMS</td>
+    <td>70</td>
+  </tr>
+</table>
+<h4 id="total1" style="font-size:50px"></h4>
+<hr>
+<button type="button" onclick="addingrow()">Addsubject</button>
+<h5 style="font-size:50px; text-decoration:underline">ADDEDSUBJECT</h5>
+<h4 id="total2" style="font-size:50px"></h4>
+<h4 id="average1" style="font-size:50px" ></h4>
+<hr>
+Firstno:<input type="text" id="input1" oninput="number()"style="margin-left:20px"><br><br>
+SecondNo:<input type="text" id="input2" oninput="number()"><br><br>
+result:<input id="result"readonly style="margin-left:30px"/>
+<hr>
+Enter a word:<input type="text"  name="text" id="check"/>
+<input type="submit" name="submit" value="check" onclick="alphabet()"/>
+<hr>
+number:<input type="text" id="input3" onclick="power()"><br><br>
+power:<input type="text" id="input4" onclick="power()"><br><br>
+result:<input id="result1"readonly /><br><hr>
+number:<input type="text" id="input5" onclick="squareroot()"><br><br>
+result:<input id="result2"readonly /><br><hr>
+number:<input type="text" id="input6" onclick="absolute()"><br><br>
+result:<input id="result3"readonly /><br><hr>
+<input type="submit" name="submit" value="generate" onclick="rand()"/><br><br>
+
+
+
+<script>
+  <!--varibles in console--!>
+  var a=5;
+  var b=2;
+  console.log(a*b);
+  <!--array--!>
+c=[1,2,3,4];
+console.log(typeof c[3].toString());
+
+  
+ <!--elements in page is converted using java--!>
+  function aboutjava(){
+    document.getElementById("demo").innerHTML="javascript is one of the 3 languages all web developers must learn:"+"<br>" +"1. HTML to define the content of web "+"<br>"+" 2. CSS to specify the layout of web "+"<br>"+" 3. JavaScript to program the behavior of web pages ";
+  }
+
+  <!--table task1--!>
+    var table=document.getElementById("Mytable");
+     sum1=0;
+     c=0;
+    for(var i=1;i<table.rows.length;i++){
+            sum1=sum1+parseInt(table.rows[i].cells[1].innerHTML);
+            c=c+1;
+    }
+      document.getElementById("total1").innerHTML="total="+sum1; 
+      <!--tabletask2--!>
+     function addingrow(){
+      var table=document.getElementById("Mytable");
+      var row=table.insertRow(7);
+      var cell1=row.insertCell(0);
+      var cell2=row.insertCell(1);
+      cell1.innerHTML="ENGINEERING MATHEMATICS";
+      cell2.innerHTML="70";
+      sum2=0;
+     c=0;
+    for(var i=1;i<table.rows.length;i++){
+            sum2=sum2+parseInt(table.rows[i].cells[1].innerHTML);
+            c=c+1;
+    }
+      document.getElementById("total2").innerHTML="total="+sum2; 
+      document.getElementById("average1").innerHTML="avg="+(sum2/c);
+    }
+  function number(){
+    var input1= document.getElementById("input1").value;
+    var input2=document.getElementById("input2").value;
+    myresult=input1*input2;
+    document.getElementById("result").value=myresult;
+  }
+  <!--Alphabetsonly--!>
+   function alphabet(){
+       var d=document.getElementById("check").value;
+       var alphabets=/^[A-Za-z]+$/;
+   if(d.match(alphabets))
+     {
+       alert('your name have accepted:');
+     }
+   else
+     {
+        alert('please give the input aplhabet characters');
+     }
+}
+   <!--math operation-->>
+    function power(){
+      var a=document.getElementById("input3").value;
+      var b=document.getElementById("input4").value;
+      powerresult=Math.pow(a,b);
+      document.getElementById("result1").value=powerresult
+    }
+    function squareroot(){
+      var a=document.getElementById("input5").value;
+      squarerootresult=Math.sqrt(a);
+      document.getElementById("result2").value=squarerootresult
+    }
+    function absolute(){
+      var a=document.getElementById("input6").value;
+      absoluteresult=Math.abs(a);
+      document.getElementById("result3").value=absoluteresult
+    }
+    function rand(){
+      var rand=Math.random();
+      document.write("<h4>randomnumber:="+rand+"</h4><br>");
+      document.write("multiply by 100="+(rand*100)+"</h4><br>");
+      document.write("floor="+Math.floor(rand*100)+"</h4><br>");
+      document.write("ceil="+Math.ceil(rand*100)+"</h4><br>");
+      document.write("cos="+Math.cos(rand*100)+"</h4><br>");
+      document.write("sin="+Math.sin(rand*100)+"</h4><br>");
+    }
+</script>
+</body>
+</html>
+ 
