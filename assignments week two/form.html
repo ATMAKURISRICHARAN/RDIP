@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RDPI</title>
+<link href="form.css" rel="stylesheet" />
+<script type = 'text/javascript' src = 'c.js' ></script>
+</head>
+<body>
+<h1>REGISTRATION FORM:</h1>
+<a href="https://www.iiit.ac.in"><img id="img" src="https://www.iiit.ac.in/img/iiit-new.png" width="150px" height="100px"></a>
+<a href="https://serc.iiit.ac.in/rdip"><p1>RDIP</p1></a><br/><br/><br/><br/><br/><br/>
+<ul>
+<br/>
+<li><a href="homepage.html" id="a">Home</a></li>
+<li><a href="registration.html" id="a">Registration Form</a></li>
+</ul><br/><br/><br/>
+<form>
+<label for="fname">First name:</label>   <input type="text"  id="fname" name="fname"  style="border-radius:5px;margin-left:60px;" oninput="validate1()"><br/><p id='1' style="margin-left:130px;"></p><br/>
+<label for="lname">Last name:</label>       <input type="text" id="lname" name="lname"  style="border-radius:5px;margin-left:60px;" oninput="validate2()"><br/><p id='2' style="margin-left:130px;"></p><br/> 
+<label for="email">Email:</label>     <input type="text" id="email" name="email" oninput="validate3()" style="border-radius:5px;margin-left:90px"><br/><p id='3' style="margin-left:130px;"></p><br/>
+<label for="number">Phone no:</label>  <input type="text" id="number" name="number" oninput="validate4()" style="border-radius:5px;margin-left:65px"><br/><p id='4' style="margin-left:130px;"></p><br/>
+<label for="gender">Gender:</label>
+<input type="radio" id="gender" name="gender" value="Male"  style="margin-left:75px"><label for="gender">Male</label>         <input type="radio" id="gender1" name="gender" value=""><label for="gender1">Female</label>   <input type="radio" id="gender2" name="gender" value=""><label for="gender2">other</label><br/><br/>
+<label for="reason for rdip">Reason for RDIP:</label>
+<input type="radio" id="reason for rdip" name="reason for rdip" value="HTML"style="margin-left:10px"><label for="stream">HTML</label>         <input type="radio" id="reason for rdip1" name="reason for rdip" value=""><label for="reason for rdip1">CSS</lable>   <input type="radio" id="reason for rdip2" name="reason for rdip" value="" ><label for="reason for rdip2">JavaScript</lable><br/><br/>
+<label for="cname" >College name:</label>   <input type="text" id="cname" oninput="validate5()" name="fname" style="border-radius:5px;margin-left:35px"><br/><p id='5' style="margin-left:130px;"><br/>
+<input type="radio" id="license" name="license" value="declare"><label for="license" style="margin-left:0px">I declare above details given by me are true.</label><br/><br/>
+<input type="submit" value="Submit" onclick="validate6()" id="button" style="border-radius:5px"> <a href="registration.html"style="margin-left:100px"><button type="button"  style="border-radius:5px">Reset</button></a> 
+</form> 
+</body>
+</html> 

@@ -1,0 +1,27 @@
+
+h1{
+font-size:200%;
+text-align:center;
+}
+#img{
+float:left;
+}
+p1{
+ float:right;
+ font-size:200%;
+ text-decoration:underline;
+}
+ul{
+margin: 0;
+background-color:black ;
+height:50px;
+padding:0;
+}
+li {
+display:inline;
+}
+#a{
+padding:20px;
+color:white;
+text-decoration:none;
+}
